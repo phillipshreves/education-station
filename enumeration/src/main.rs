@@ -61,15 +61,15 @@ fn main() {
             },
             Coin::Nickel => 5,
             Coin::Dime => 10,
-            Coin::Quarter => {
+            Coin::Quarter(state) => {
                 println!("State quarter from {:?}!", state);
                 25
             },
         }
     }
 
-            value_in_cents(
-                Coin::Quarter(UsState::Alaska)
-            ) 
+    let value_return = value_in_cents(
+        Coin::Quarter(UsState::Alaska)
+    ); 
 }
 
