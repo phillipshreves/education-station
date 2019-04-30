@@ -16,7 +16,7 @@ fn main() {
     flight_1.destination_location = destination_confirm;
     println!("Destination confirmed: {}", flight_1.destination_location);
 
-    let mut flight_2 = build_flight(String::from("LHR"), String::from("ORD"), 4321);
+    let flight_2 = build_flight(String::from("LHR"), String::from("ORD"), 4321);
     println!("New flight: {},{},{}", flight_2.origin_location, flight_2.destination_location, flight_2.flight_number);
 
     let flight_3 = Flight {
