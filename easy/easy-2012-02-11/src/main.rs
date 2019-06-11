@@ -18,7 +18,7 @@ fn encrypt(message: &String) -> String {
         };
         let char_new = char_encryption as char;
         match char_encryption {
-            65..=122_ => encrypted.push_str(&char_new.to_string()),
+            65..=122 => encrypted.push_str(&char_new.to_string()),
             _ => ()
         }
     }
@@ -26,6 +26,7 @@ fn encrypt(message: &String) -> String {
 }
 
 fn main() {
+    println!("Message to encrypt:");
     let message = get_input();
     let encrypted_message = encrypt(&message);
     println!("Encrypted message: {}", encrypted_message);
