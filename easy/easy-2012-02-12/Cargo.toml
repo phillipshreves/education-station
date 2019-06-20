@@ -1,8 +1,0 @@
-[package]
-name = "easy-2012-02-12"
-version = "0.1.0"
-authors = ["Phillip Shreves <hi@phillips.work>"]
-edition = "2018"
-
-[dependencies]
-rand = "0.6.5"
