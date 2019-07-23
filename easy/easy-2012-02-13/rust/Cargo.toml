@@ -5,3 +5,4 @@ authors = ["Phillip Shreves <hi@phillips.work>"]
 edition = "2018"
 
 [dependencies]
+csv = "1.1"
