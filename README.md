@@ -4,7 +4,8 @@ Tic Tac Toe Implementation
 # Instructions
 Class: TicTacToe
     Private data members:
-        the board(a list of lists that represent a 3x3 board)
+        board
+            a list of lists that represent a 3x3 board
         current_state
             Value must be one of:
                 X_WON
@@ -16,6 +17,7 @@ Class: TicTacToe
                 UNFINISHED
     Methods:
         get_current_state
+            get method
         init
             initializes the board to a list of three lists that each contain three empty strings
             initializes the current_state to "UNFINISHED"
