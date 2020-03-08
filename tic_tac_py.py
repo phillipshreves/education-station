@@ -9,7 +9,7 @@ class TicTacToe:
         self.current_state = "UNFINISHED" 
 
     def get_current_state(self): 
-        self.current_state
+        return self.current_state
 
     def make_move(self, row, column, x_or_o):
         player = x_or_o.upper()
@@ -42,6 +42,7 @@ class TicTacToe:
         # Update Current State
         blank_count = 0
         # Check for wins and draws
+        winner = False
         count_needed_to_win = 3
         value_count = ""
         for row_object in self.board:
@@ -57,13 +58,13 @@ class TicTacToe:
             value_count = 0
             for current_value in row_object:
 
-                # Check for non-matching value
-                if initial_value != current_value:
-                    # Check for blank value
-                    if not current_value:
-                        blank_count = blank_count + 1
+                # Check for blank value
+                if not current_value:
+                    blank_count = blank_count + 1
                     break
-
+                # Check for non-matching value
+                elif initial_value != current_value:
+                    break
                 else:
                     value_count = value_count + 1
 
@@ -79,16 +80,15 @@ class TicTacToe:
             for row_index, row_object in enumerate(self.board):
                 current_value = self.board[row_index][column_index]
 
-                # Check for non-matching value
-                if initial_value != current_value:
-                    # Check for blank value
-                    if not current_value:
-                        blank_count = blank_count + 1
+                # Check for blank value
+                if not current_value:
+                    blank_count = blank_count + 1
                     break
-
+                # Check for non-matching value
+                elif initial_value != current_value:
+                    break
                 else:
                     value_count = value_count + 1
-
 
         if winner:
             self.current_state = player + "_WON"
@@ -97,9 +97,9 @@ class TicTacToe:
 
         return True
 
-print("test")
 test = TicTacToe()
-test.get_current_state()
+print(test.get_current_state())
 test.make_move(0,0,"x")
 test.make_move(0,1,"x")
 test.make_move(0,2,"x")
+print(test.get_current_state())
