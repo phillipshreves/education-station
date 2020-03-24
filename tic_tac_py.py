@@ -95,6 +95,7 @@ class TicTacToe:
                     value_count = value_count + 1
 
         # Check for corner-to-corner win
+        # this could be changed to an iterator to allow for unlimited board size
         if not winner:
             if  player == self.board[0][0] == self.board[1][1] == self.board[2][2]:
                 winner = True
