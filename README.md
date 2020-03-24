@@ -1,12 +1,12 @@
-# tic_tac_toe
-Tic Tac Toe Implementation
+# Tic Tac Toe
+A simple Tic Tac Toe implementation, written in Python
 
 # Instructions
-Class: TicTacToe
-    Private data members:
-        board
+## Class: TicTacToe
+###    Private data members:
+####        board
             a list of lists that represent a 3x3 board
-        current_state
+####        current_state
             Value must be one of:
                 X_WON
                     three consecutive X's
@@ -15,13 +15,13 @@ Class: TicTacToe
                 DRAW
                     all squares are filled but neither player has won
                 UNFINISHED
-    Methods:
-        get_current_state
+ ###   Methods:
+ ####       get_current_state
             get method
-        init
+ ####       init
             initializes the board to a list of three lists that each contain three empty strings
             initializes the current_state to "UNFINISHED"
-        make_move
+####        make_move
             Parameters:
                 row
                     integer with range 0-2
