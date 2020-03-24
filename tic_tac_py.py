@@ -72,6 +72,10 @@ class TicTacToe:
         #Iterate over columns to check for column win
         for column_index, column_object in enumerate(self.board[0]):
 
+            if value_count == count_needed_to_win:
+                winner = True
+                break
+
             if winner:
                 break
 
@@ -90,6 +94,14 @@ class TicTacToe:
                 else:
                     value_count = value_count + 1
 
+        # Check for corner-to-corner win
+        if not winner:
+            if  player == self.board[0][0] == self.board[1][1] == self.board[2][2]:
+                winner = True
+            elif player == self.board[0][2] == self.board[1][1] == self.board[2][0]:
+                winner = True
+
+
         if winner:
             self.current_state = player + "_WON"
         elif blank_count == 0:
@@ -97,9 +109,43 @@ class TicTacToe:
 
         return True
 
-test = TicTacToe()
-print(test.get_current_state())
-test.make_move(0,0,"x")
-test.make_move(0,1,"x")
-test.make_move(0,2,"x")
-print(test.get_current_state())
+row_test = TicTacToe()
+print(row_test.get_current_state())
+row_test.make_move(0,0,"x")
+row_test.make_move(0,1,"x")
+row_test.make_move(0,2,"x")
+print(row_test.get_current_state())
+row_test.make_move(0,2,"x")
+
+column_test = TicTacToe()
+print(column_test.get_current_state())
+column_test.make_move(0,1,"x")
+column_test.make_move(1,1,"x")
+column_test.make_move(2,1,"x")
+print(column_test.get_current_state())
+column_test.make_move(2,1,"x")
+
+forward_slash_test = TicTacToe()
+print(forward_slash_test.get_current_state())
+forward_slash_test.make_move(2,0,"o")
+forward_slash_test.make_move(1,1,"o")
+forward_slash_test.make_move(0,2,"o")
+print(forward_slash_test.get_current_state())
+forward_slash_test.make_move(2,1,"o")
+
+backward_slash_test = TicTacToe()
+print(backward_slash_test.get_current_state())
+backward_slash_test.make_move(0,2,"x")
+backward_slash_test.make_move(1,1,"x")
+backward_slash_test.make_move(2,0,"x")
+print(backward_slash_test.get_current_state())
+backward_slash_test.make_move(2,1,"x")
+
+no_winner_test = TicTacToe()
+print(no_winner_test.get_current_state())
+no_winner_test.make_move(0,2,"x")
+no_winner_test.make_move(1,1,"o")
+no_winner_test.make_move(2,0,"x")
+print(no_winner_test.get_current_state())
+no_winner_test.make_move(2,1,"x")
+print(no_winner_test.get_current_state())
