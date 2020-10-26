@@ -50,3 +50,7 @@ A simple Tic Tac Toe implementation, written in Python
 =======
 # reddit-daily-programmer
 Working through the coding problems on reddit.com/r/dailyprogrammer
+
+=======
+# rust-learning
+Projects to work on while learning Rust language

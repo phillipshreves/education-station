@@ -1,0 +1,11 @@
+[package]
+name = "rectangles"
+version = "0.1.0"
+<<<<<<< HEAD
+authors = ["Phillip Shreves <hi@phillips.work>"]
+=======
+authors = ["Phillip Shreves <pshreves@highpointgo.com>"]
+>>>>>>> 80ef5af44eae858f0722d678d10a89cd65a694af
+edition = "2018"
+
+[dependencies]
