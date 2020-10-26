@@ -1,4 +1,4 @@
-# education_station
+# Education Station
 Working through different projects to learn new skills
 
 =======
