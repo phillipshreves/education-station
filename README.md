@@ -8,6 +8,10 @@ Solutions to the Advent Of Code problems
 Please visit adventofcode.com and support the site.
 
 =======
+# Beginning Javascript
+Working through code examples in the Beginning Javascript, Fifth Edition, book.
+
+=======
 # Tic Tac Toe
 A simple Tic Tac Toe implementation, written in Python
 
